@@ -23,3 +23,10 @@ where order_status='delivered';
 select order_status , count(*)
 from orders
 GROUP BY order_status;
+select name 
+from sqlite_master
+where type='table';
+PRAGMA table_info(orders);
+select *
+from orders
+limit 5;
