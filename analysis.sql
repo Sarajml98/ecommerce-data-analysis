@@ -30,3 +30,19 @@ PRAGMA table_info(orders);
 select *
 from orders
 limit 5;
+select name
+from sqlite_master
+where type='table';
+PRAGMA table_info(payments);
+select sum(payment_value)
+from payments;
+select AVg(payment_value)
+from payments;
+select payment_type , avg(payment_value)
+from payments
+group by payment_type;
+
+select payment_type , sum(payment_value) As total_payment
+from payments
+group by payment_type
+order by sum(payment_value) DESC;
