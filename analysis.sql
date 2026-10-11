@@ -14,4 +14,12 @@ where  order_status='canceled';
 SELECT *
 FROM orders
 ORDER BY order_purchase_timestamp DESC;
-
+select *
+from orders
+order by order_purchase_timestamp Asc;
+select count(*)
+from orders
+where order_status='delivered';
+select order_status , count(*)
+from orders
+GROUP BY order_status;
